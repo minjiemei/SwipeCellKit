@@ -48,9 +48,6 @@ public struct SwipeOptions {
     /// The amount of space, in points, between the view and superView
     public var topSpacing: CGFloat?
 
-    /// The amount of space, in points, between the view and superView
-    public var rightSpacing: CGFloat?
-
     /// Constructs a new `SwipeOptions` instance with default options.
     public init() {}
 }

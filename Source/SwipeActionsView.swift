@@ -151,7 +151,7 @@ class SwipeActionsView: UIView {
         buttons.enumerated().forEach { index, button in
             let action = actions[index]
             let frame = CGRect(origin: .zero, size: CGSize(width: bounds.width, height: bounds.height))
-            let wrapperView = SwipeActionButtonWrapperView(frame: frame, action: action, orientation: orientation, contentWidth: minimumButtonWidth , spacing: options.rightSpacing)
+            let wrapperView = SwipeActionButtonWrapperView(frame: frame, action: action, orientation: orientation, contentWidth: minimumButtonWidth)
             wrapperView.translatesAutoresizingMaskIntoConstraints = false
             wrapperView.addSubview(button)
 
@@ -281,12 +281,12 @@ class SwipeActionButtonWrapperView: UIView {
     let contentRect: CGRect
     var actionBackgroundColor: UIColor?
 
-    init(frame: CGRect, action: SwipeAction, orientation: SwipeActionsOrientation, contentWidth: CGFloat, spacing: CGFloat? = 0) {
+    init(frame: CGRect, action: SwipeAction, orientation: SwipeActionsOrientation, contentWidth: CGFloat) {
         switch orientation {
         case .left:
-            contentRect = CGRect(x: frame.width - (contentWidth - (spacing ?? 0)), y: 0, width: contentWidth - (spacing ?? 0), height: frame.height)
+            contentRect = CGRect(x: frame.width - contentWidth, y: 0, width: contentWidth, height: frame.height)
         case .right:
-            contentRect = CGRect(x: 0, y: 0, width: contentWidth - (spacing ?? 0), height: frame.height)
+            contentRect = CGRect(x: 0, y: 0, width: contentWidth, height: frame.height)
         }
 
         super.init(frame: frame)

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 54;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,7 +15,6 @@
 		3F234B0F1E44AC2600E22A38 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F234B091E44AC2600E22A38 /* Assets.xcassets */; };
 		3F234B171E44B29B00E22A38 /* SwipeCellKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F234B031E44AB7A00E22A38 /* SwipeCellKit.framework */; };
 		3F234B181E44B29B00E22A38 /* SwipeCellKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3F234B031E44AB7A00E22A38 /* SwipeCellKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		898628793009C9630037594F /* LookinServer in Frameworks */ = {isa = PBXBuildFile; productRef = 898628783009C9630037594F /* LookinServer */; };
 		B93ECA9D1EDEF1EA00AE05AD /* MailCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93ECA9C1EDEF1EA00AE05AD /* MailCollectionViewController.swift */; };
 		B93ECA9F1EDEF56300AE05AD /* Shared.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93ECA9E1EDEF56300AE05AD /* Shared.swift */; };
 /* End PBXBuildFile section */
@@ -71,7 +70,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F234B171E44B29B00E22A38 /* SwipeCellKit.framework in Frameworks */,
-				898628793009C9630037594F /* LookinServer in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,8 +341,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -360,10 +357,7 @@
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = MailExample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -378,10 +372,7 @@
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = MailExample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -408,25 +399,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		898628773009C9630037594F /* XCRemoteSwiftPackageReference "LookinServer" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/QMUI/LookinServer/";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.2.8;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		898628783009C9630037594F /* LookinServer */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 898628773009C9630037594F /* XCRemoteSwiftPackageReference "LookinServer" */;
-			productName = LookinServer;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3F234ADB1E44AA5E00E22A38 /* Project object */;
 }

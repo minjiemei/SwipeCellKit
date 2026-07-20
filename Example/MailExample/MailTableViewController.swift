@@ -161,10 +161,13 @@ extension MailTableViewController: SwipeTableViewCellDelegate {
 
             return [read]
         } else {
-//            let flag = SwipeAction(style: .default, title: nil, handler: nil)
-//            flag.hidesWhenSelected = true
-//            configure(action: flag, with: .flag)
-//
+            let flag = SwipeAction(style: .default, title: nil, handler: nil)
+            flag.hidesWhenSelected = true
+            configure(action: flag, with: .flag)
+            flag.cornerRadius = 12
+            flag.actionBackgroundColor = .red
+            flag.backgroundColor = .clear
+
 //            let delete = SwipeAction(style: .destructive, title: nil) { action, indexPath in
 //                self.emails.remove(at: indexPath.row)
 //            }
@@ -196,6 +199,8 @@ extension MailTableViewController: SwipeTableViewCellDelegate {
         options.buttonSpacing = 8
         options.topSpacing = 8
         options.backgroundColor = .white
+        options.minimumButtonWidth = 88 + 12
+        options.rightSpacing = 12
 //        options.expansionStyle = orientation == .left ? .selection : .destructive
 //        options.transitionStyle = defaultOptions.transitionStyle
 //
